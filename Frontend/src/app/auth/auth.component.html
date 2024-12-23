@@ -1,0 +1,49 @@
+<div class="container-main">
+    <div class="register-form">
+        <h3>Register</h3>
+        <form #userregister="ngForm" (ngSubmit)="onRegister(userregister)">
+            <div class="form-input">
+                <input type="text" placeholder="name" ngModel name="name" required>
+            </div>
+            <div class="form-input">
+                <input type="email" placeholder="email" ngModel name="email" required>
+            </div>
+            <div class="form-input">
+                <input type="password" placeholder="password" ngModel name="password" required>
+            </div>
+            <div class="register-dropdowns">
+                <label>Department:</label>
+                <select name="department" ngModel>
+                    <option value="CSE" selected>CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                </select>
+                <label >Year:</label>
+                <select name="year" ngModel>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="form-input">
+                <button type="submit">Register</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    <div class="login-form">
+        <h3>Login</h3>
+        <form #userlogin="ngForm" (ngSubmit)="onLogin(userlogin)">
+            <div class="form-input">
+                <input type="email" placeholder="email" ngModel name="email" required>
+            </div>
+            <div class="form-input">
+                <input type="password" placeholder="password" ngModel name="password" required>
+            </div>            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>

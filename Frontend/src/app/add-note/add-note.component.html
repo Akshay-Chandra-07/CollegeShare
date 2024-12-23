@@ -1,0 +1,32 @@
+<div class="container-main">
+    <form #createNote="ngForm" (ngSubmit)="onCreate(createNote)">
+        <div class="form-input">
+            <input type="text" placeholder="title" name="title" ngModel>
+        </div>
+        <div class="form-input">
+            <textarea name="content" cols="30" rows="10" placeholder="content" ngModel></textarea>
+        </div>
+        <input type="file" (change)="onFileSelected($event)" required>
+        <div class="form-input">
+            <div class="form-dropdowns">
+                <label>Department:</label>
+                <select name="department" ngModel>
+                    <option value="CSE" selected>CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                </select>
+                <label >Year:</label>
+                <select name="year" ngModel>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

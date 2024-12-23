@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+}
+.container-main{
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+}
+button{
+    cursor: pointer;
+}

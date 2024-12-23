@@ -1,0 +1,37 @@
+.container-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 50vh;
+    min-height: 50vh;
+    padding: 20px;
+    
+}
+
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    
+}
+.form-input{
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.form-dropdowns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 0.25rem;
+    border: none;
+}

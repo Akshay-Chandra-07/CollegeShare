@@ -1,0 +1,15 @@
+<div class="container-main">
+    <div *ngIf="singleNote">
+        <h3>{{singleNote.title}}</h3>
+        <p>{{singleNote.content}}</p>
+        <button *ngIf="type=='pdf'">
+            <a [href]="singleNote.file_url" target="_blank" style="text-decoration: none;">Open PDF</a>
+        </button>
+        <!-- <iframe *ngIf="type=='pdf'" [src]="singleNote.file_url | pdf" width="100%" height="500px"></iframe> -->
+        <img *ngIf="type!='pdf'" [src]="singleNote.file_url" alt="this is an image">
+        <p>Uploaded By: <span>{{singleNote.uploaded_by}}</span></p>
+        <p>Uploaded On: <span>{{singleNote.uploaded_on}}</span></p>
+        <button (click)="goBack()">Back</button>
+    </div>
+
+</div>

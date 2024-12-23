@@ -1,0 +1,27 @@
+<div class="container-main">
+    <div class="add-btn">
+        <button class="addBtn" (click)="onAdd()" ><i class="fa-solid fa-plus"></i></button>
+    </div>
+
+    <div class="cards" *ngIf="userAllNotes;else noNotes">
+        <div *ngFor="let note of userAllNotes">
+            <div class="note-card">
+                <h3>{{note.title}}</h3>
+                <p>{{note.content}}</p>
+            <!-- <p>{{note.uploaded_by}}</p> -->
+                <p>{{note.uploaded_on}}</p>
+            <div class="note-action-btn">
+                <button (click)="onOpen(note)">Open</button>
+                <button (click)="onDel(note)" >Delete</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noNotes>
+        <h3>You have no notes to display</h3>
+    </ng-template>
+</div>
+<div class="back-btn">
+    <button (click)="goBack()">Back</button>
+</div>

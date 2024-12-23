@@ -1,0 +1,32 @@
+.container-main-navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: bisque;
+}
+.container-logo img{
+    height: 40px;
+    width: 200px;
+}
+.container-logo{
+    padding:10px
+}
+
+.container-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    /* background-color: blue; */
+    width: 25rem;
+}
+
+.container-profile button{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+}

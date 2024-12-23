@@ -1,0 +1,33 @@
+.addBtn{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+}
+.addBtn:hover{
+    transform: scale(1.1);
+}
+.container-main{
+    display: flex;
+}
+.cards{
+    display: flex;
+}
+.note-card{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    min-height: 20vh;
+    width: 30vh;
+    margin: 10px;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+.note-action-btn{
+    display: flex;
+    justify-content: space-evenly   ;
+}
+.back-btn{
+    text-align: center;
+    margin: 10px;
+}

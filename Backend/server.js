@@ -1,0 +1,20 @@
+const express = require('express')
+const database = require('./config/database')
+const authRoute = require('./routes/authRoutes')
+const notesRoute = require('./routes/notesRoutes')
+const cors = require('cors')
+const multer = require('multer')
+const app = express()
+const path = require('path')
+
+app.use(express.json())
+app.use(cors())
+app.use('/api/department/:dept/:id',express.static(path.resolve(__dirname,'../uploads')))
+app.use('/api/auth',authRoute)
+app.use('/api',notesRoute)
+
+app.listen(5000,()=>{
+    console.log("Listening to port 5000...")
+    console.log(__dirname)
+    console.log(path.resolve(__dirname,'../uploads'))
+})
